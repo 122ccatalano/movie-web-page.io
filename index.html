@@ -5,42 +5,23 @@
     <title>Fast and Furious 7</title>
 
           <link rel = "icon" href ="img/furious7.jpg" type = "image/jpg">
-
-    <style>
-      body {
-        background-color: #99ddff;
-      }
-      h1 {
-        text-align: center;
-        color: #006699;
-        font-size: 65px;
-      }
-      h2 {
-        text-align: center;
-        color: #0099e6;
-        font-size: 45px;
-      }
-      img {
-        height: 50%;
-        width: 50%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      table {
-        border-color: #006699;
-        width: 50%;
-      }
-      h3 {
-        color: #006699;
-        font-size: 20px;
-      }
-      p {
-        font-size: 20px;
-      }
-    </style>
+          <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="navbar">
+  <a href="https://122ccatalano.github.io/122ccatalano.io/">Home</a>
+  <a href="https://122ccatalano.github.io/calendar.io/">Calendar</a>
+  <div class="dropdown">
+  <button class="dropbtn" onclick="myFunction()">Dropdown
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content" id="myDropdown">
+    <a href="https://122ccatalano.github.io/movie.io/">My Favorite Movie</a>
+    <a href="https://122ccatalano.github.io/products.io/">My Product</a>
+    <a href="https://122ccatalano.github.io/hometown.io/">My Hometown</a>
+  </div>
+  </div>
+</div>
     <h1>Fast and Furious 7</h1>
     <h2>April 3, 2015</h2>
     <br>
@@ -165,5 +146,22 @@
     <img src="img/f7-paul-walker.jpg">
     <br>
     <img src="img/furious7-a.jpg">
+    <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
   </body>
 </html>
